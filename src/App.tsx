@@ -6,44 +6,44 @@
 import { motion } from "motion/react";
 import { Send, IceCream, Star, PartyPopper, Truck, Music, Instagram, Mail, Phone, MapPin } from "lucide-react";
 
-const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+const base = "";
 
 const MENU_ITEMS = [
   {
     id: 1,
     title: "بطاط حلزوني",
     description: "بطاط مقرمش طازج مع نكهات مميزة",
-    image: `${base}/images/spiral_potato.png`,
+    image: "/images/spiral_potato.png",
   },
   {
     id: 2,
     title: "آيس كريم",
     description: "آيس كريم بارد ومنعش لجميع أذواقكم",
-    image: `${base}/images/ice_cream.png`,
+    image: "/images/ice_cream.png",
   },
   {
     id: 3,
     title: "نفيش",
     description: "نفيش طازج وحار بمذاق رائع",
-    image: `${base}/images/popcorn.png`,
+    image: "/images/popcorn.png",
   },
   {
     id: 4,
     title: "شعر بنات",
     description: "حلاوة غزل البنات الوردية والناعمة",
-    image: `${base}/images/cotton_candy.png`,
+    image: "/images/cotton_candy.png",
   },
   {
     id: 5,
     title: "ذرة",
     description: "حبوب الذرة بالزبدة والليمون",
-    image: `${base}/images/corn.png`,
+    image: "/images/corn.png",
   },
   {
     id: 6,
     title: "فرايز",
     description: "بطاط مقلية ذهبية ومقرمشة",
-    image: `${base}/images/fries.png`,
+    image: "/images/fries.png",
   },
 ];
 
@@ -128,9 +128,9 @@ export default function App() {
               <div className="flex items-center gap-3 px-6 py-4 bg-white rounded-2xl border border-amber-200 shadow-sm">
                 <div className="flex -space-x-2 space-x-reverse">
                   {[
-                    `${base}/images/popcorn.png`,
-                    `${base}/images/ice_cream.png`,
-                    `${base}/images/fries.png`
+                    "/images/popcorn.png",
+                    "/images/ice_cream.png",
+                    "/images/fries.png"
                   ].map((src, i) => (
                     <div key={i} className="w-10 h-10 rounded-full border-2 border-white bg-slate-200 overflow-hidden">
                       <img
@@ -157,7 +157,7 @@ export default function App() {
           >
             <div className="col-span-2 relative aspect-[4/3] rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white">
               <img
-                src={`${base}/images/hero_truck.png`}
+                src="/images/hero_truck.png"
                 alt="Truck"
                 className="w-full h-full object-cover"
                 referrerPolicy="no-referrer"
