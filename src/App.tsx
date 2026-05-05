@@ -2,7 +2,7 @@
  * @license
  * SPDX-License-Identifier: Apache-2.0
  */
-// Final deployment fix verification
+// Final deployment fix verification for snackyq8.com - Corrected Base Path
 
 import { motion } from "motion/react";
 import { Send, Star, PartyPopper, Truck, Music } from "lucide-react";
