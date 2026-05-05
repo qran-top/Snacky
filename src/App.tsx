@@ -6,14 +6,14 @@
 import { motion } from "motion/react";
 import { Send, IceCream, Star, PartyPopper, Truck, Music, Instagram, Mail, Phone, MapPin } from "lucide-react";
 
-// مسارات الصور المباشرة من مجلد public لضمان التوافق مع النطاق المخصص
-const spiralPotato = "/images/spiral_potato.png";
-const iceCreamImg = "/images/ice_cream.png";
-const popcornImg = "/images/popcorn.png";
-const cottonCandy = "/images/cotton_candy.png";
-const cornImg = "/images/corn.png";
-const friesImg = "/images/fries.png";
-const heroTruck = "/images/hero_truck.png";
+// استيراد الصور برمجياً لضمان تعامل Vite معها بشكل صحيح وتحسين التوافق
+import spiralPotato from "./assets/images/spiral_potato.png";
+import iceCreamImg from "./assets/images/ice_cream.png";
+import popcornImg from "./assets/images/popcorn.png";
+import cottonCandy from "./assets/images/cotton_candy.png";
+import cornImg from "./assets/images/corn.png";
+import friesImg from "./assets/images/fries.png";
+import heroTruck from "./assets/images/hero_truck.png";
 
 const MENU_ITEMS = [
   {
