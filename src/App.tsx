@@ -8,22 +8,22 @@ import { motion } from "motion/react";
 import { Send, Star, PartyPopper, Truck, Music, Instagram, Video, Ghost } from "lucide-react";
 
 // استيراد الصور من الملفات المرفوعة لضمان هوية سناكي الحقيقية
-const friesImg = "/fries_cyan_cone.png";
-const cottonCandy = "/cotton_candy_beach.png";
-const spiralPotatoStick = "/spiral_potato_stick.png";
-const popcornImg = "/popcorn_yellow_box.png";
-const cornImg = "/corn_cup_hand.png";
-const iceCreamImg = "/ice_cream_cone_mirror.png";
-const heroTruck = "/snacky_van_full.png"; 
+const friesImg = "/fries_cyan_cone.jpg";
+const cottonCandy = "/cotton_candy_beach.jpg";
+const spiralPotatoStick = "/spiral_potato_stick.jpg";
+const popcornImg = "/popcorn_yellow_box.jpg";
+const cornImg = "/corn_cup_hand.jpg";
+const iceCreamImg = "/ice_cream_cone_mirror.jpg";
+const heroTruck = "/snacky_van_full.jpg"; 
 
 // صور إضافية للمعرض والمنيو
-const iceCreamPopcorn = "/ice_cream_popcorn.png";
-const popcornDetail = "/popcorn_box_detail.png";
-const iceCreamPlain = "/ice_cream_cone_mirror.png";
-const popcornYellow = "/popcorn_hand_holding.png";
-const spiralPotatoesBox = "/spiral_potato_yellow_box.png";
-const cornCupDetail = "/corn_scoop_detail.png";
-const popcornCyanBox = "/popcorn_cyan_box.png";
+const iceCreamPopcorn = "/ice_cream_popcorn.jpg";
+const popcornDetail = "/popcorn_box_detail.jpg";
+const iceCreamPlain = "/ice_cream_cone_mirror.jpg";
+const popcornYellow = "/popcorn_hand_holding.jpg";
+const spiralPotatoesBox = "/spiral_potato_yellow_box.jpg";
+const cornCupDetail = "/corn_scoop_detail.jpg";
+const popcornCyanBox = "/popcorn_cyan_box.jpg";
 
 const MENU_ITEMS = [
   {
