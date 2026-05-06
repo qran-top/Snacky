@@ -35,7 +35,7 @@ const MENU_ITEMS = [
   {
     id: 2,
     title: "آيس كريم سناكي",
-    description: "آيس كريم بارد ومنعش، متوفر بالبوب كورن أو سادة",
+    description: "آيس كريم بارد ومنعش",
     image: iceCreamPopcorn,
   },
   {
@@ -231,7 +231,7 @@ export default function App() {
                     <Star className="w-4 h-4 fill-current" />
                   </div>
                 </div>
-                <p className="text-sm text-slate-600 font-medium lowercase">@snacky.q8 • 60002799</p>
+                <p className="text-sm text-slate-600 font-medium lowercase">@snacky.q8 • {CONTACT_INFO.phones[0]} - {CONTACT_INFO.phones[1]}</p>
               </div>
             </div>
             
@@ -252,7 +252,7 @@ export default function App() {
               <span className="text-primary font-black uppercase tracking-widest text-xs mb-4 block">لماذا نحن؟</span>
               <h2 className="text-4xl md:text-6xl font-black text-slate-800 mb-8 leading-tight">هوية سناكي الفريدة وسحر المناسبات</h2>
               <p className="text-xl text-slate-500 leading-relaxed font-medium">
-                تتميز سيارة سناكي بتصميمها المبتكر المقتبس من ألوان البحار والرمال الذهبية، مع شخصية سبونج بوب المحبوبة التي تجذب الكبار والصغار.
+                تتميز سيارة سناكي بتصميمها المبتكر المقتبس من ألوان البحار والرمال الذهبية، مما يضفي أجواءً من البهجة والمرح التي تجذب الكبار والصغار في كل مناسبة.
               </p>
             </div>
             <div className="grid grid-cols-2 gap-4 w-full md:w-auto">
@@ -267,8 +267,8 @@ export default function App() {
           
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
-              { icon: Truck, title: "تصميم عصري", desc: "سيارة سناكي الملونة بالسيان والأبيض بستايل 'الطلاء المنسال' تلفت الأنظار في أي مكان." },
-              { icon: PartyPopper, title: "متعة بصرية وطعم رائع", desc: "نقدم الأشكال المفضلة مثل البطاط الحلزوني والنفيش الملون بطعم يجمع بين الجودة والشغف." },
+              { icon: Truck, title: "تصميم عصري", desc: "سيارة سناكي المتألقة باللونين الأبيض والأزرق السماوي بتصميمها الأنيق والجذاب الذي يلفت الأنظار في كل مكان." },
+              { icon: PartyPopper, title: "متعة بصرية وطعم رائع", desc: "نقدم السناكات المفضلة مثل البطاط الحلزوني والنفيش بطعم يجمع بين الجودة والشغف." },
               { icon: Star, title: "نظافة واحترافية", desc: "نلتزم بأعلى معايير النظافة والتعقيم، مع فريق عمل محترف يرتدي القفازات والزي الرسمي." },
             ].map((feature, idx) => (
               <motion.div
@@ -336,12 +336,12 @@ export default function App() {
       {/* Gallery Section */}
       <section className="py-32 bg-slate-50 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
-            <div className="text-right">
+          <div className="flex flex-col md:flex-row justify-between items-center md:items-end mb-20 gap-8 text-center md:text-right">
+            <div>
               <span className="text-primary font-black uppercase tracking-widest text-xs mb-4 block">جولة في عالم سناكي</span>
               <h2 className="text-4xl md:text-6xl font-black text-slate-800">لقطات من الواقع</h2>
             </div>
-            <p className="text-slate-500 max-w-sm font-medium">كل منتجاتنا تُحضر بعناية فائقة وتُقدم لكم في تغليف سناكي المبتكر لتكتمل متعة الطعم بالشكل الجميل.</p>
+            <p className="text-slate-500 max-w-sm font-medium text-center md:text-right">كل منتجاتنا تُحضر بعناية فائقة وتُقدم لكم في تغليف سناكي المبتكر لتكتمل متعة الطعم بالشكل الجميل.</p>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
