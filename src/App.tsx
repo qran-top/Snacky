@@ -8,18 +8,19 @@ import { motion } from "motion/react";
 import { Send, Star, PartyPopper, Truck, Music } from "lucide-react";
 
 // استيراد الصور من مصادر خارجية لضمان عمل الموقع حتى في غياب الملفات المحلية
-// استيراد الصور المرفقة
-const friesImg = "/input_file_0.png";
-const cottonCandy = "/input_file_1.png";
-const spiralPotatoesBox = "/input_file_2.png";
-const popcornYellow = "/input_file_3.png";
-const cornCup = "/input_file_4.png";
-const popcornDetail = "/input_file_5.png";
-const popcornBox = "/input_file_6.png";
-const heroTruck = "/input_file_7.png";
-const iceCreamPopcorn = "/input_file_8.png";
-const iceCreamPlain = "/input_file_9.png";
-const spiralPotatoStick = "/input_file_10.png";
+// استيراد الصور من مصادر خارجية لضمان عمل الموقع حتى يتم رفع الصور المحلية
+const friesImg = "https://images.unsplash.com/photo-1573080496219-bb080dd4f877?q=80&w=1887&auto=format&fit=crop";
+const cottonCandy = "https://images.unsplash.com/photo-1572635148818-ef6fd45eb394?q=80&w=1780&auto=format&fit=crop";
+const spiralPotatoStick = "https://images.unsplash.com/photo-1541592106381-b31e9677c0e5?q=80&w=2070&auto=format&fit=crop";
+const popcornImg = "https://images.unsplash.com/photo-1585647347483-22b66260dfff?q=80&w=2070&auto=format&fit=crop";
+const cornImg = "https://images.unsplash.com/photo-1551754655-cd27e38d2076?q=80&w=2070&auto=format&fit=crop";
+const iceCreamImg = "https://images.unsplash.com/photo-1501443762994-82bd5dace89a?q=80&w=2070&auto=format&fit=crop";
+const heroTruck = "https://images.unsplash.com/photo-1565123409695-7b5ef63a2efb?q=80&w=2070&auto=format&fit=crop"; 
+
+// صور إضافية للمعرض
+const popcornDetail = "https://images.unsplash.com/photo-1512149177596-f817c7ef5d4c?q=80&w=2000&auto=format&fit=crop";
+const iceCreamPlain = "https://images.unsplash.com/photo-1567206563064-6f60f40a2b57?q=80&w=1974&auto=format&fit=crop";
+const popcornYellow = "https://images.unsplash.com/photo-1505686994434-e3cc5abf1330?q=80&w=2070&auto=format&fit=crop";
 
 const MENU_ITEMS = [
   {
@@ -32,13 +33,13 @@ const MENU_ITEMS = [
     id: 2,
     title: "آيس كريم سناكي",
     description: "آيس كريم بارد ومنعش، متوفر بالبوب كورن أو سادة",
-    image: iceCreamPopcorn,
+    image: iceCreamImg,
   },
   {
     id: 3,
     title: "نفيش (بوب كورن)",
     description: "نفيش طازج وحار بمذاق رائع في بوكس سناكي",
-    image: popcornBox,
+    image: popcornImg,
   },
   {
     id: 4,
@@ -50,7 +51,7 @@ const MENU_ITEMS = [
     id: 5,
     title: "ذرة سناكي",
     description: "حبوب الذرة بالزبدة والليمون في كوب سناكي المميز",
-    image: cornCup,
+    image: cornImg,
   },
   {
     id: 6,
@@ -62,7 +63,7 @@ const MENU_ITEMS = [
     id: 7,
     title: "بوكس بطاط حلزوني",
     description: "مجموعة من البطاط الحلزوني في بوكس للمشاركة",
-    image: spiralPotatoesBox,
+    image: spiralPotatoStick,
   },
 ];
 
@@ -156,8 +157,8 @@ export default function App() {
               <div className="flex items-center gap-3 px-6 py-4 bg-white rounded-2xl border border-cyan-50 shadow-sm">
                 <div className="flex -space-x-2 space-x-reverse">
                   {[
-                    popcornBox,
-                    iceCreamPopcorn,
+                    popcornImg,
+                    iceCreamImg,
                     friesImg
                   ].map((src, i) => (
                     <div key={i} className="w-10 h-10 rounded-full border-2 border-white bg-slate-100 overflow-hidden">
@@ -334,10 +335,10 @@ export default function App() {
             </div>
             <div className="space-y-4 md:space-y-6">
               <div className="rounded-[2.5rem] overflow-hidden shadow-lg border-2 border-white aspect-[3/4]">
-                <img src={"/input_file_11.png"} alt="Gallery 5" className="w-full h-full object-cover hover:scale-110 transition-transform duration-700" />
+                <img src={friesImg} alt="Gallery 5" className="w-full h-full object-cover hover:scale-110 transition-transform duration-700" />
               </div>
               <div className="rounded-[2.5rem] overflow-hidden shadow-lg border-2 border-white aspect-square">
-                <img src={popcornBox} alt="Gallery 6" className="w-full h-full object-cover hover:scale-110 transition-transform duration-700" />
+                <img src={popcornImg} alt="Gallery 6" className="w-full h-full object-cover hover:scale-110 transition-transform duration-700" />
               </div>
             </div>
             <div className="space-y-4 md:space-y-6 pt-12">
