@@ -8,22 +8,22 @@ import { motion } from "motion/react";
 import { Send, Star, PartyPopper, Truck, Music, Instagram, Video, Ghost } from "lucide-react";
 
 // استيراد الصور من الملفات المرفوعة لضمان هوية سناكي الحقيقية
-const friesImg = "/fries_cyan_cone.jpg";
-const cottonCandy = "/cotton_candy_beach.jpg";
-const spiralPotatoStick = "/spiral_potato_stick.jpg";
-const popcornImg = "/popcorn_yellow_box.jpg";
-const cornImg = "/corn_cup_hand.jpg";
-const iceCreamImg = "/ice_cream_cone_mirror.jpg";
-const heroTruck = "/snacky_van_full.jpg"; 
+const friesImg = "/fries_cyan_cone.png";
+const cottonCandy = "/cotton_candy_beach.png";
+const spiralPotatoStick = "/spiral_potato_stick.png";
+const popcornImg = "/popcorn_yellow_box.png";
+const cornImg = "/corn_cup_hand.png";
+const iceCreamImg = "/ice_cream_cone_mirror.png";
+const heroTruck = "/snacky_van_full.png"; 
 
 // صور إضافية للمعرض والمنيو
-const iceCreamPopcorn = "/ice_cream_popcorn.jpg";
-const popcornDetail = "/popcorn_box_detail.jpg";
-const iceCreamPlain = "/ice_cream_cone_mirror.jpg";
-const popcornYellow = "/popcorn_hand_holding.jpg";
-const spiralPotatoesBox = "/spiral_potato_yellow_box.jpg";
-const cornCupDetail = "/corn_scoop_detail.jpg";
-const popcornCyanBox = "/popcorn_cyan_box.jpg";
+const iceCreamPopcorn = "/ice_cream_popcorn.png";
+const popcornDetail = "/popcorn_box_detail.png";
+const iceCreamPlain = "/ice_cream_cone_mirror.png";
+const popcornYellow = "/popcorn_hand_holding.png";
+const spiralPotatoesBox = "/spiral_potato_yellow_box.png";
+const cornCupDetail = "/corn_scoop_detail.png";
+const popcornCyanBox = "/popcorn_cyan_box.png";
 
 const MENU_ITEMS = [
   {
@@ -74,9 +74,9 @@ const CONTACT_INFO = {
   phones: ["60002799", "60002797"],
   email: "Snacky.q8@hotmail.com",
   socials: {
-    instagram: "https://instagram.com/Snacky.q8",
-    tiktok: "https://tiktok.com/@snacky.q8",
-    snapchat: "https://snapchat.com/add/snacky.q8",
+    instagram: "Snacky.q8",
+    tiktok: "Snacky.q8",
+    snapchat: "Snacky.q8",
   },
 };
 
@@ -423,68 +423,35 @@ export default function App() {
                 "أجمل الفعاليات للأطفال والكبار، ولا تحتاجون للذهاب إلى أي مكان، سناكي يصل إليكم أينما كنتم ليصنع أجمل اللحظات السعيدة."
               </p>
               
-            <div className="space-y-12">
-              <div>
-                <h3 className="text-3xl font-black mb-10 text-slate-800 flex items-center gap-3">
-                  <span className="w-2 h-8 bg-primary rounded-full" />
-                  حساباتنا الرسمية
-                </h3>
-                
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-                  <a href={CONTACT_INFO.socials.instagram} target="_blank" rel="noreferrer" className="group/social">
-                    <div className="p-8 bg-slate-50/50 rounded-[2.5rem] flex flex-col items-center gap-5 transition-all duration-500 hover:bg-primary hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/30 border border-transparent hover:border-white/20">
-                      <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center text-primary shadow-sm group-hover/social:scale-110 transition-transform">
-                        <Instagram className="w-8 h-8" />
-                      </div>
-                      <div className="text-center">
-                        <p className="text-[10px] font-black text-slate-400 group-hover/social:text-white/70 uppercase tracking-widest mb-1">Instagram</p>
-                        <p className="font-bold text-slate-700 group-hover/social:text-white">@Snacky.q8</p>
-                      </div>
-                    </div>
-                  </a>
-
-                  <a href={CONTACT_INFO.socials.tiktok} target="_blank" rel="noreferrer" className="group/social">
-                    <div className="p-8 bg-slate-50/50 rounded-[2.5rem] flex flex-col items-center gap-5 transition-all duration-500 hover:bg-[#000000] hover:-translate-y-2 hover:shadow-2xl hover:shadow-black/30 border border-transparent hover:border-white/20">
-                      <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center text-slate-900 shadow-sm group-hover/social:scale-110 transition-transform">
-                        <Music className="w-8 h-8" />
-                      </div>
-                      <div className="text-center">
-                        <p className="text-[10px] font-black text-slate-400 group-hover/social:text-white/70 uppercase tracking-widest mb-1">TikTok</p>
-                        <p className="font-bold text-slate-700 group-hover/social:text-white">@Snacky.q8</p>
-                      </div>
-                    </div>
-                  </a>
-
-                  <a href={CONTACT_INFO.socials.snapchat} target="_blank" rel="noreferrer" className="group/social">
-                    <div className="p-8 bg-slate-50/50 rounded-[2.5rem] flex flex-col items-center gap-5 transition-all duration-500 hover:bg-[#FFFC00] hover:-translate-y-2 hover:shadow-2xl hover:shadow-[#FFFC00]/30 border border-transparent hover:border-white/20">
-                      <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center text-slate-900 shadow-sm group-hover/social:scale-110 transition-transform">
-                        <Ghost className="w-8 h-8" />
-                      </div>
-                      <div className="text-center">
-                        <p className="text-[10px] font-black text-slate-400 group-hover/social:text-slate-600 uppercase tracking-widest mb-1">Snapchat</p>
-                        <p className="font-bold text-slate-700 group-hover/social:text-slate-900">@Snacky.q8</p>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-
-                <motion.div 
-                  initial={{ opacity: 0, y: 10 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  className="mt-10 p-8 bg-primary-light/30 rounded-[2.5rem] border border-primary/10 flex items-center gap-6"
-                >
-                  <div className="w-14 h-14 bg-primary rounded-2xl flex items-center justify-center text-white shrink-0 shadow-lg shadow-primary/20">
-                    <PartyPopper className="w-8 h-8" />
+              <div className="flex flex-wrap gap-8">
+                <a href="https://instagram.com/snacky.q8" target="_blank" rel="noreferrer" className="flex items-center gap-4 group/social">
+                  <div className="w-14 h-14 bg-slate-50 rounded-2xl flex items-center justify-center text-primary shadow-sm border border-slate-100 group-hover/social:bg-primary group-hover/social:text-white transition-all">
+                    <Instagram className="w-7 h-7" />
                   </div>
-                  <div>
-                    <p className="font-black text-primary-dark text-lg mb-1">خللك قريب!</p>
-                    <p className="font-bold text-slate-600 text-sm leading-relaxed">
-                      تابعنا وشاركنا لحظاتك السعيدة مع سناكي. ننتظركم دائماً بعروض وفعاليات مفاجئة!
-                    </p>
+                  <div className="text-sm">
+                    <p className="text-slate-400 font-black leading-none mb-1 text-[10px]">INSTAGRAM</p>
+                    <p className="font-bold text-slate-700">@Snacky.q8</p>
                   </div>
-                </motion.div>
+                </a>
+                <a href="https://tiktok.com/@snacky.q8" target="_blank" rel="noreferrer" className="flex items-center gap-4 group/social">
+                  <div className="w-14 h-14 bg-slate-50 rounded-2xl flex items-center justify-center text-primary shadow-sm border border-slate-100 group-hover/social:bg-primary group-hover/social:text-white transition-all">
+                    <Video className="w-7 h-7" />
+                  </div>
+                  <div className="text-sm">
+                    <p className="text-slate-400 font-black leading-none mb-1 text-[10px]">TIKTOK</p>
+                    <p className="font-bold text-slate-700">@Snacky.q8</p>
+                  </div>
+                </a>
+                <a href="https://snapchat.com/add/snacky.q8" target="_blank" rel="noreferrer" className="flex items-center gap-4 group/social">
+                  <div className="w-14 h-14 bg-slate-50 rounded-2xl flex items-center justify-center text-primary shadow-sm border border-slate-100 group-hover/social:bg-primary group-hover/social:text-white transition-all">
+                    <Ghost className="w-7 h-7" />
+                  </div>
+                  <div className="text-sm">
+                    <p className="text-slate-400 font-black leading-none mb-1 text-[10px]">SNAPCHAT</p>
+                    <p className="font-bold text-slate-700">@Snacky.q8</p>
+                  </div>
+                </a>
               </div>
-            </div>
             </div>
 
             <div className="bg-primary p-12 md:p-16 rounded-[4rem] shadow-3xl shadow-cyan-100 relative overflow-hidden group">

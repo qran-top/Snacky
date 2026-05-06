@@ -1,9 +1,6 @@
 {
-  "name": "سناكي - Snacky",
-  "description": "سناكي - محطة السناكات المتنقلة الأولى في الكويت. نقدم النفيش، الذرة، البطاط الحلزوني، الأيس كريم وشعر البنات بأعلى جودة.",
-  "requestFramePermissions": [
-    "camera",
-    "microphone",
-    "geolocation"
-  ]
+  "name": "Snacky Q8",
+  "description": "خدمة سيارات سناك متنقلة في الكويت للفعاليات والمناسبات.",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
 }
