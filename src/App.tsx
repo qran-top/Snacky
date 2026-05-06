@@ -18,7 +18,7 @@ const heroTruck = "/snacky_van_full.jpg";
 
 // صور إضافية للمعرض والمنيو
 const iceCreamPopcorn = "/ice_cream_popcorn.jpg";
-const popcornDetail = "/popcorn_box_detail.jpg";
+const popcornDetail = "/corn_scoop_detail.jpg";
 const iceCreamPlain = "/ice_cream_cone_mirror.jpg";
 const popcornYellow = "/popcorn_hand_holding.jpg";
 const spiralPotatoesBox = "/spiral_potato_yellow_box.jpg";
