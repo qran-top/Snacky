@@ -7,14 +7,14 @@
 import { motion } from "motion/react";
 import { Send, Star, PartyPopper, Truck, Music } from "lucide-react";
 
-// استيراد الصور برمجياً لضمان تعامل Vite معها بشكل صحيح وتحسين التوافق مع GitHub Pages
-import spiralPotato from "./assets/images/spiral_potato.png";
-import iceCreamImg from "./assets/images/ice_cream.png";
-import popcornImg from "./assets/images/popcorn.png";
-import cottonCandy from "./assets/images/cotton_candy.png";
-import cornImg from "./assets/images/corn.png";
-import friesImg from "./assets/images/fries.png";
-import heroTruck from "./assets/images/hero_truck.png";
+// استيراد الصور من مصادر خارجية لضمان عمل الموقع حتى في غياب الملفات المحلية
+const spiralPotato = "https://images.unsplash.com/photo-1541592106381-b31e9677c0e5?q=80&w=2070&auto=format&fit=crop";
+const iceCreamImg = "https://images.unsplash.com/photo-1501443762994-82bd5dace89a?q=80&w=2070&auto=format&fit=crop";
+const popcornImg = "https://images.unsplash.com/photo-1585647347483-22b66260dfff?q=80&w=2070&auto=format&fit=crop";
+const cottonCandy = "https://images.unsplash.com/photo-1572635148818-ef6fd45eb394?q=80&w=1780&auto=format&fit=crop";
+const cornImg = "https://images.unsplash.com/photo-1551754655-cd27e38d2076?q=80&w=2070&auto=format&fit=crop";
+const friesImg = "https://images.unsplash.com/photo-1573080496219-bb080dd4f877?q=80&w=1887&auto=format&fit=crop";
+const heroTruck = "https://images.unsplash.com/photo-1565123409695-7b5ef63a2efb?q=80&w=2070&auto=format&fit=crop";
 
 const MENU_ITEMS = [
   {
