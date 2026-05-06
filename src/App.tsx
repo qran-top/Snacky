@@ -8,32 +8,37 @@ import { motion } from "motion/react";
 import { Send, Star, PartyPopper, Truck, Music } from "lucide-react";
 
 // استيراد الصور من مصادر خارجية لضمان عمل الموقع حتى في غياب الملفات المحلية
-const spiralPotato = "https://images.unsplash.com/photo-1541592106381-b31e9677c0e5?q=80&w=2070&auto=format&fit=crop";
-const iceCreamImg = "https://images.unsplash.com/photo-1501443762994-82bd5dace89a?q=80&w=2070&auto=format&fit=crop";
-const popcornImg = "https://images.unsplash.com/photo-1585647347483-22b66260dfff?q=80&w=2070&auto=format&fit=crop";
-const cottonCandy = "https://images.unsplash.com/photo-1572635148818-ef6fd45eb394?q=80&w=1780&auto=format&fit=crop";
-const cornImg = "https://images.unsplash.com/photo-1551754655-cd27e38d2076?q=80&w=2070&auto=format&fit=crop";
-const friesImg = "https://images.unsplash.com/photo-1573080496219-bb080dd4f877?q=80&w=1887&auto=format&fit=crop";
-const heroTruck = "https://images.unsplash.com/photo-1565123409695-7b5ef63a2efb?q=80&w=2070&auto=format&fit=crop";
+// استيراد الصور المرفقة
+const friesImg = "/input_file_0.png";
+const cottonCandy = "/input_file_1.png";
+const spiralPotatoesBox = "/input_file_2.png";
+const popcornYellow = "/input_file_3.png";
+const cornCup = "/input_file_4.png";
+const popcornDetail = "/input_file_5.png";
+const popcornBox = "/input_file_6.png";
+const heroTruck = "/input_file_7.png";
+const iceCreamPopcorn = "/input_file_8.png";
+const iceCreamPlain = "/input_file_9.png";
+const spiralPotatoStick = "/input_file_10.png";
 
 const MENU_ITEMS = [
   {
     id: 1,
     title: "بطاط حلزوني",
-    description: "بطاط مقرمش طازج مع نكهات مميزة",
-    image: spiralPotato,
+    description: "بطاط حلزوني مقرمش طازج مع نكهات مميزة",
+    image: spiralPotatoStick,
   },
   {
     id: 2,
-    title: "آيس كريم",
-    description: "آيس كريم بارد ومنعش لجميع أذواقكم",
-    image: iceCreamImg,
+    title: "آيس كريم سناكي",
+    description: "آيس كريم بارد ومنعش، متوفر بالبوب كورن أو سادة",
+    image: iceCreamPopcorn,
   },
   {
     id: 3,
-    title: "نفيش",
-    description: "نفيش طازج وحار بمذاق رائع",
-    image: popcornImg,
+    title: "نفيش (بوب كورن)",
+    description: "نفيش طازج وحار بمذاق رائع في بوكس سناكي",
+    image: popcornBox,
   },
   {
     id: 4,
@@ -43,15 +48,21 @@ const MENU_ITEMS = [
   },
   {
     id: 5,
-    title: "ذرة",
-    description: "حبوب الذرة بالزبدة والليمون",
-    image: cornImg,
+    title: "ذرة سناكي",
+    description: "حبوب الذرة بالزبدة والليمون في كوب سناكي المميز",
+    image: cornCup,
   },
   {
     id: 6,
-    title: "فرايز",
-    description: "بطاط مقلية ذهبية ومقرمشة",
+    title: "فرايز سناكي",
+    description: "بطاط مقلية ذهبية ومقرمشة في قمع سناكي المبتكر",
     image: friesImg,
+  },
+  {
+    id: 7,
+    title: "بوكس بطاط حلزوني",
+    description: "مجموعة من البطاط الحلزوني في بوكس للمشاركة",
+    image: spiralPotatoesBox,
   },
 ];
 
@@ -82,28 +93,28 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-amber-50 text-slate-800 font-sans selection:bg-orange-100" dir="rtl">
+    <div className="min-h-screen bg-white text-slate-800 font-sans selection:bg-cyan-100" dir="rtl">
       {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-amber-50/80 backdrop-blur-md border-b border-amber-200">
-        <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-          <div className="flex items-center gap-4">
-            <div className="w-12 h-12 bg-orange-500 rounded-2xl flex items-center justify-center text-white text-2xl font-black shadow-lg">
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-cyan-100">
+        <div className="max-w-7xl mx-auto px-4 md:px-6 h-20 flex items-center justify-between">
+          <div className="flex items-center gap-3 md:gap-4">
+            <div className="w-10 h-10 md:w-12 md:h-12 bg-primary rounded-2xl flex items-center justify-center text-white text-xl md:text-2xl font-black shadow-lg shadow-cyan-100">
               S
             </div>
             <div className="flex flex-col">
-              <span className="text-2xl font-bold tracking-tight text-orange-600 uppercase leading-none">Snacky</span>
-              <span className="text-[10px] text-slate-500 font-medium tracking-widest uppercase mt-1">Mobile Snack Station • سناكات متنقلة</span>
+              <span className="text-xl md:text-2xl font-bold tracking-tight text-primary uppercase leading-none">Snacky</span>
+              <span className="text-[8px] md:text-[10px] text-slate-500 font-medium tracking-widest uppercase mt-1">Mobile Snack Station • سناكات متنقلة</span>
             </div>
           </div>
-          <div className="hidden md:flex items-center gap-8 text-slate-600 font-semibold text-sm uppercase tracking-wide">
-            <a href="#home" className="hover:text-orange-600 transition-colors">الرئيسية</a>
-            <a href="#about" className="hover:text-orange-600 transition-colors">عن سناكي</a>
-            <a href="#menu" className="hover:text-orange-600 transition-colors">المنيو</a>
-            <a href="#contact" className="hover:text-orange-600 transition-colors">اتصل بنا</a>
+          <div className="hidden lg:flex items-center gap-8 text-slate-600 font-semibold text-sm uppercase tracking-wide">
+            <a href="#home" className="hover:text-primary transition-colors">الرئيسية</a>
+            <a href="#about" className="hover:text-primary transition-colors">عن سناكي</a>
+            <a href="#menu" className="hover:text-primary transition-colors">المنيو</a>
+            <a href="#contact" className="hover:text-primary transition-colors">اتصل بنا</a>
           </div>
           <a
             href={`tel:${CONTACT_INFO.phones[0]}`}
-            className="bg-slate-900 text-white px-8 py-3 rounded-2xl font-bold text-sm hover:scale-105 transition-all shadow-xl shadow-slate-200"
+            className="bg-slate-900 text-white px-4 md:px-8 py-2 md:py-3 rounded-xl md:rounded-2xl font-bold text-xs md:text-sm hover:scale-105 transition-all shadow-xl shadow-slate-200"
           >
             احجز الآن
           </a>
@@ -111,39 +122,48 @@ export default function App() {
       </nav>
 
       {/* Hero Section */}
-      <section id="home" className="pt-32 pb-20 px-6">
-        <div className="max-w-7xl mx-auto grid grid-cols-12 gap-12 items-center">
+      <section id="home" className="pt-32 pb-20 px-6 relative overflow-hidden">
+        {/* Decorative elements */}
+        <div className="absolute -top-24 -left-24 w-96 h-96 bg-primary/5 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute top-1/2 -right-24 w-64 h-64 bg-secondary/10 rounded-full blur-3xl" />
+
+        <div className="max-w-7xl mx-auto grid grid-cols-12 gap-12 items-center relative z-10">
           <motion.div
             initial={{ x: 50, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             className="col-span-12 lg:col-span-7 flex flex-col items-start gap-6"
           >
-            <div className="inline-block px-4 py-1.5 bg-orange-100 text-orange-600 rounded-full text-sm font-bold">
+            <div className="inline-block px-4 py-1.5 bg-primary-light text-primary-dark rounded-full text-sm font-bold">
               نغطّي جميع مناطق الكويت 🇰🇼
             </div>
-            <h1 className="text-5xl md:text-7xl font-black text-slate-800 leading-tight">
-              أحلى فعاليات للأطفال والكبار!<br />
-              <span className="text-orange-500 underline decoration-amber-300 underline-offset-8">سناكي يمركم!</span>
+            <h1 className="text-4xl md:text-7xl font-black text-slate-800 leading-tight">
+              أجمل الفعاليات للأطفال والكبار!<br />
+              <span className="text-primary underline decoration-secondary underline-offset-8">سناكي يصل إليكم</span>
             </h1>
-            <p className="text-xl text-slate-600 leading-relaxed max-w-lg">
-              سيارة سناكي عبارة عن سناكات متنقلة توصل لجميع المناطق وجميع المناسبات، الفعاليات، الزوارة، والأعياد الوطنية والميلاد. ما يحتاج تروح لأي مكان... نحن نأتي إليك!
+            <p className="text-lg md:text-xl text-slate-600 leading-relaxed max-w-lg">
+              سناكي هو عالم من السناكات المتنقلة بتصميم عصري وألوان مبهجة. نصل لجميع الجمعات والمناسبات والفعاليات لنضفي جواً من السعادة واللذة.
             </p>
-            <div className="flex flex-wrap gap-4 mt-4">
-              <button className="bg-slate-900 text-white px-10 py-5 rounded-2xl font-bold text-lg shadow-2xl flex items-center gap-3 hover:bg-slate-800 transition-colors">
+            <div className="flex flex-wrap gap-4 mt-4 w-full">
+              <a 
+                href={`https://wa.me/965${CONTACT_INFO.phones[0]}`}
+                target="_blank"
+                rel="noreferrer"
+                className="bg-green-500 text-white px-6 md:px-10 py-4 md:py-5 rounded-2xl font-bold text-base md:text-lg shadow-2xl shadow-green-100 flex items-center justify-center gap-3 hover:bg-green-600 transition-colors flex-1 md:flex-none"
+              >
                 تواصل واتساب
                 <Send className="w-5 h-5 -rotate-90" />
-              </button>
-              <div className="flex items-center gap-3 px-6 py-4 bg-white rounded-2xl border border-amber-200 shadow-sm">
+              </a>
+              <div className="flex items-center gap-3 px-6 py-4 bg-white rounded-2xl border border-cyan-50 shadow-sm">
                 <div className="flex -space-x-2 space-x-reverse">
                   {[
-                    popcornImg,
-                    iceCreamImg,
+                    popcornBox,
+                    iceCreamPopcorn,
                     friesImg
                   ].map((src, i) => (
-                    <div key={i} className="w-10 h-10 rounded-full border-2 border-white bg-slate-200 overflow-hidden">
+                    <div key={i} className="w-10 h-10 rounded-full border-2 border-white bg-slate-100 overflow-hidden">
                       <img
                         src={src}
-                        alt="User"
+                        alt="Preview"
                         className="w-full h-full object-cover"
                         referrerPolicy="no-referrer"
                       />
@@ -152,7 +172,7 @@ export default function App() {
                 </div>
                 <div className="text-xs">
                   <p className="font-bold text-slate-900">+500 عميل سعيد</p>
-                  <p className="text-slate-400">نخدم جميع مناطق الكويت</p>
+                  <p className="text-slate-400 text-[10px]">نخدم جميع مناطق الكويت</p>
                 </div>
               </div>
             </div>
@@ -161,64 +181,77 @@ export default function App() {
           <motion.div
             initial={{ scale: 0.9, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
-            className="col-span-12 lg:col-span-5 grid grid-cols-2 gap-4"
+            className="col-span-12 lg:col-span-5 relative"
           >
-            <div className="col-span-2 relative aspect-[4/3] rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white">
+            <div className="relative aspect-[4/5] md:aspect-[3/4] lg:aspect-[4/5] rounded-[3rem] overflow-hidden shadow-2xl border-8 border-white group">
               <img
                 src={heroTruck}
-                alt="Truck"
-                className="w-full h-full object-cover"
+                alt="Snacky Truck"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000"
                 referrerPolicy="no-referrer"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent" />
-              <div className="absolute bottom-6 right-6">
-                <PartyPopper className="w-12 h-12 text-orange-400" />
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/40 via-transparent to-transparent" />
+              <div className="absolute bottom-8 left-8 right-8 bg-white/90 backdrop-blur-sm p-6 rounded-2xl border border-white/50 shadow-lg">
+                <div className="flex items-center justify-between mb-2">
+                  <h3 className="font-black text-primary text-xl">سيارة سناكي</h3>
+                  <div className="flex text-secondary">
+                    <Star className="w-4 h-4 fill-current" />
+                    <Star className="w-4 h-4 fill-current" />
+                    <Star className="w-4 h-4 fill-current" />
+                    <Star className="w-4 h-4 fill-current" />
+                    <Star className="w-4 h-4 fill-current" />
+                  </div>
+                </div>
+                <p className="text-sm text-slate-600 font-medium lowercase">@snacky.q8 • 60002799</p>
               </div>
             </div>
-            <div className="bg-white p-6 rounded-3xl shadow-sm border border-orange-100 flex flex-col items-center justify-center text-center">
-              <div className="text-3xl mb-2">🍿</div>
-              <h3 className="font-bold text-slate-800">نفيش</h3>
-            </div>
-            <div className="bg-orange-500 p-6 rounded-3xl shadow-lg text-white flex flex-col items-center justify-center text-center">
-              <div className="text-3xl mb-2">🌽</div>
-              <h3 className="font-bold">ذرة</h3>
+            
+            {/* Floating badges */}
+            <div className="absolute -top-6 -right-6 bg-secondary text-slate-800 p-6 rounded-3xl shadow-xl rotate-12 z-20 font-black flex flex-col items-center">
+              <span className="text-2xl">🔥</span>
+              <span>مميزة</span>
             </div>
           </motion.div>
         </div>
       </section>
 
       {/* Services/About */}
-      <section id="about" className="py-24 bg-white relative overflow-hidden">
-        <div className="absolute top-0 right-0 p-20 opacity-5 text-slate-300 font-bold text-9xl uppercase tracking-tighter mix-blend-multiply pointer-events-none origin-top-right rotate-90 select-none">
-          Catering
-        </div>
+      <section id="about" className="py-24 bg-slate-50 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 relative">
-          <div className="flex flex-col md:flex-row items-end justify-between mb-16 gap-8">
-            <div className="max-w-xl">
-              <h2 className="text-5xl font-black text-slate-800 mb-6">ليش تختار سناكي؟</h2>
-              <p className="text-lg text-slate-500 leading-relaxed">
-                نحن نهتم بأدق التفاصيل لنضمن نجاح فعاليتك. خدمتنا متكاملة وسريعة وتضيف جو من البهجة لمناسباتكم.
+          <div className="flex flex-col md:flex-row items-center justify-between mb-20 gap-12">
+            <div className="max-w-xl text-center md:text-right">
+              <span className="text-primary font-black uppercase tracking-widest text-xs mb-4 block">لماذا نحن؟</span>
+              <h2 className="text-4xl md:text-6xl font-black text-slate-800 mb-8 leading-tight">هوية سناكي الفريدة وسحر المناسبات</h2>
+              <p className="text-xl text-slate-500 leading-relaxed font-medium">
+                تتميز سيارة سناكي بتصميمها المبتكر المقتبس من ألوان البحار والرمال الذهبية، مع شخصية سبونج بوب المحبوبة التي تجذب الكبار والصغار.
               </p>
             </div>
-            <div className="w-48 h-2 bg-orange-500 rounded-full" />
+            <div className="grid grid-cols-2 gap-4 w-full md:w-auto">
+              <div className="w-full h-48 md:w-56 md:h-72 rounded-3xl overflow-hidden shadow-lg border-4 border-white rotate-3">
+                <img src={popcornDetail} className="w-full h-full object-cover" alt="Detail" />
+              </div>
+              <div className="w-full h-48 md:w-56 md:h-72 rounded-3xl overflow-hidden shadow-lg border-4 border-white -rotate-3 mt-12">
+                <img src={iceCreamPlain} className="w-full h-full object-cover" alt="Detail" />
+              </div>
+            </div>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
-              { icon: Truck, title: "نوصلكم وين ما كنتم", desc: "نغطي جميع مناطق الكويت ونصلكم في الوقت المحدد." },
-              { icon: Music, title: "أجواء الفرح", desc: "نضيف لمسة من المرح والبهجة لمناسباتكم الخاصة." },
-              { icon: Star, title: "جودة وطعم", desc: "نستخدم أفضل المكونات لنقدم لكم طعماً لا ينسى." },
+              { icon: Truck, title: "تصميم عصري", desc: "سيارة سناكي الملونة بالسيان والأبيض بستايل 'الطلاء المنسال' تلفت الأنظار في أي مكان." },
+              { icon: PartyPopper, title: "متعة بصرية وطعم رائع", desc: "نقدم الأشكال المفضلة مثل البطاط الحلزوني والنفيش الملون بطعم يجمع بين الجودة والشغف." },
+              { icon: Star, title: "نظافة واحترافية", desc: "نلتزم بأعلى معايير النظافة والتعقيم، مع فريق عمل محترف يرتدي القفازات والزي الرسمي." },
             ].map((feature, idx) => (
               <motion.div
                 key={idx}
-                whileHover={{ y: -8 }}
-                className="bg-amber-50 p-10 rounded-[2.5rem] border border-amber-200 group transition-all"
+                whileHover={{ y: -10 }}
+                className="bg-white p-12 rounded-[3.5rem] border border-cyan-50 group transition-all shadow-sm hover:shadow-xl hover:shadow-cyan-100/50"
               >
-                <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center shadow-lg mb-8 group-hover:bg-orange-500 group-hover:scale-110 transition-all">
-                  <feature.icon className="text-orange-500 w-8 h-8 group-hover:text-white transition-all" />
+                <div className="w-20 h-20 bg-primary/10 rounded-[2rem] flex items-center justify-center mb-10 group-hover:bg-primary transition-all">
+                  <feature.icon className="text-primary w-10 h-10 group-hover:text-white transition-all outline-none" />
                 </div>
-                <h3 className="text-2xl font-bold text-slate-800 mb-4">{feature.title}</h3>
-                <p className="text-slate-500 leading-relaxed">{feature.desc}</p>
+                <h3 className="text-2xl font-black text-slate-800 mb-6">{feature.title}</h3>
+                <p className="text-slate-500 leading-relaxed font-medium">{feature.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -226,16 +259,12 @@ export default function App() {
       </section>
 
       {/* Menu Section */}
-      <section id="menu" className="py-24 bg-amber-50">
+      <section id="menu" className="py-32 bg-white">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6 border-b border-amber-200 pb-12">
-            <div>
-              <span className="text-orange-600 font-bold uppercase tracking-widest text-sm mb-4 block">قائمتنا المختارة</span>
-              <h2 className="text-5xl font-black text-slate-800">قائمة اللذة لدينا</h2>
-            </div>
-            <div className="text-left font-bold text-slate-200 text-6xl uppercase tracking-tighter opacity-40 hidden lg:block select-none">
-              Snacks
-            </div>
+          <div className="text-center mb-24">
+            <span className="text-primary font-black uppercase tracking-widest text-xs mb-4 block">قائمتنا اللذيذة</span>
+            <h2 className="text-4xl md:text-7xl font-black text-slate-800">جرب طعم سناكي المميز</h2>
+            <div className="w-32 h-2 bg-secondary mx-auto mt-8 rounded-full" />
           </div>
 
           <motion.div
@@ -243,28 +272,30 @@ export default function App() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10"
           >
             {MENU_ITEMS.map((item) => (
               <motion.div
                 key={item.id}
                 variants={itemVariants}
-                className="group bg-white rounded-[2.5rem] overflow-hidden border border-amber-100 hover:shadow-2xl transition-all duration-500"
+                className="group flex flex-col bg-slate-50 rounded-[4rem] overflow-hidden border border-slate-100 hover:bg-white hover:shadow-2xl hover:shadow-cyan-100/30 transition-all duration-500"
               >
-                <div className="relative h-80 overflow-hidden">
+                <div className="relative h-96 overflow-hidden m-4 rounded-[3rem]">
                   <img
                     src={item.image}
                     alt={item.title}
                     referrerPolicy="no-referrer"
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000"
                   />
-                  <div className="absolute inset-0 bg-orange-600/10 opacity-0 group-hover:opacity-100 transition-opacity" />
+                  <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity" />
                 </div>
-                <div className="p-10 text-center">
-                  <h3 className="text-2xl font-bold text-slate-800 mb-3">{item.title}</h3>
-                  <p className="text-slate-500 text-sm mb-8 leading-relaxed italic">"{item.description}"</p>
-                  <button className="w-full py-4 bg-amber-50 text-slate-800 font-bold rounded-2xl border border-amber-200 group-hover:bg-slate-900 group-hover:text-white transition-all">
-                    عرض التفاصيل
+                <div className="px-12 pb-12 pt-4 text-center">
+                  <h3 className="text-2xl font-black text-slate-800 mb-4">{item.title}</h3>
+                  <p className="text-slate-500 font-medium text-sm leading-relaxed mb-10 h-12 overflow-hidden">
+                    {item.description}
+                  </p>
+                  <button className="w-full py-5 bg-white text-primary font-black rounded-3xl border-2 border-primary/20 group-hover:bg-primary group-hover:text-white group-hover:border-primary transition-all shadow-sm">
+                    أضف لطلبك
                   </button>
                 </div>
               </motion.div>
@@ -274,99 +305,145 @@ export default function App() {
       </section>
 
       {/* Gallery Section */}
-      <section className="py-24 bg-slate-900 relative overflow-hidden">
-        <div className="absolute left-0 top-0 h-full w-32 bg-orange-500/10 blur-3xl opacity-50" />
-        <div className="max-w-7xl mx-auto px-6 relative">
-          <div className="text-center mb-16">
-            <h2 className="text-5xl font-black text-white mb-4">لقطات من فعالياتنا</h2>
-            <div className="w-24 h-1 bg-orange-500 mx-auto rounded-full" />
+      <section className="py-32 bg-slate-50 relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+            <div className="text-right">
+              <span className="text-primary font-black uppercase tracking-widest text-xs mb-4 block">جولة في عالم سناكي</span>
+              <h2 className="text-4xl md:text-6xl font-black text-slate-800">لقطات من الواقع</h2>
+            </div>
+            <p className="text-slate-500 max-w-sm font-medium">كل منتجاتنا تُحضر بعناية فائقة وتُقدم لكم في تغليف سناكي المبتكر لتكتمل متعة الطعم بالشكل الجميل.</p>
           </div>
-          <div className="flex gap-8 overflow-x-auto pb-10 hide-scrollbar cursor-grab active:cursor-grabbing">
-            {[
-              { src: spiralPotato, title: "بطاط حلزوني مميز" },
-              { src: cottonCandy, title: "شعر بنات طازج" },
-              { src: popcornImg, title: "نفيش حار وفريش" },
-              { src: cornImg, title: "ذرة بالزبدة والليمون" }
-            ].map((img, idx) => (
-              <div key={idx} className="min-w-[400px] h-[500px] rounded-[3rem] overflow-hidden shadow-2xl border-8 border-white/5 flex-shrink-0 group relative">
-                <img
-                  src={img.src}
-                  alt={img.title}
-                  referrerPolicy="no-referrer"
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-10">
-                  <p className="text-white font-bold text-xl">{img.title}</p>
-                </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+            <div className="space-y-4 md:space-y-6">
+              <div className="rounded-[2.5rem] overflow-hidden shadow-lg border-2 border-white aspect-[3/4]">
+                <img src={popcornDetail} alt="Gallery 1" className="w-full h-full object-cover hover:scale-110 transition-transform duration-700" />
               </div>
-            ))}
+              <div className="rounded-[2.5rem] overflow-hidden shadow-lg border-2 border-white aspect-square">
+                <img src={iceCreamPlain} alt="Gallery 2" className="w-full h-full object-cover hover:scale-110 transition-transform duration-700" />
+              </div>
+            </div>
+            <div className="space-y-4 md:space-y-6 pt-12">
+              <div className="rounded-[2.5rem] overflow-hidden shadow-lg border-2 border-white aspect-square">
+                <img src={popcornYellow} alt="Gallery 3" className="w-full h-full object-cover hover:scale-110 transition-transform duration-700" />
+              </div>
+              <div className="rounded-[2.5rem] overflow-hidden shadow-lg border-2 border-white aspect-[3/4]">
+                <img src={spiralPotatoStick} alt="Gallery 4" className="w-full h-full object-cover hover:scale-110 transition-transform duration-700" />
+              </div>
+            </div>
+            <div className="space-y-4 md:space-y-6">
+              <div className="rounded-[2.5rem] overflow-hidden shadow-lg border-2 border-white aspect-[3/4]">
+                <img src={"/input_file_11.png"} alt="Gallery 5" className="w-full h-full object-cover hover:scale-110 transition-transform duration-700" />
+              </div>
+              <div className="rounded-[2.5rem] overflow-hidden shadow-lg border-2 border-white aspect-square">
+                <img src={popcornBox} alt="Gallery 6" className="w-full h-full object-cover hover:scale-110 transition-transform duration-700" />
+              </div>
+            </div>
+            <div className="space-y-4 md:space-y-6 pt-12">
+              <div className="rounded-[2.5rem] overflow-hidden shadow-lg border-2 border-white aspect-square">
+                <img src={friesImg} alt="Gallery 7" className="w-full h-full object-cover hover:scale-110 transition-transform duration-700" />
+              </div>
+              <div className="rounded-[2.5rem] overflow-hidden shadow-lg border-2 border-white aspect-[3/4]">
+                <img src={heroTruck} alt="Gallery 8" className="w-full h-full object-cover hover:scale-110 transition-transform duration-700" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Stats / Full Width Image */}
+      <section className="h-[60vh] relative mt-16 group overflow-hidden">
+        <img src={popcornYellow} className="w-full h-full object-cover fixed-background" alt="Popcorn Background" />
+        <div className="absolute inset-0 bg-slate-900/40 backdrop-blur-[2px] flex items-center justify-center text-center p-6">
+          <div className="max-w-4xl">
+            <h2 className="text-white text-4xl md:text-7xl font-black mb-8 drop-shadow-2xl">طازج، لذيذ وممتع في كل لحظة!</h2>
+            <div className="flex flex-wrap justify-center gap-12 text-white">
+              <div className="flex flex-col">
+                <span className="text-5xl font-black text-secondary">+10k</span>
+                <span className="text-sm font-bold uppercase tracking-widest opacity-80">سناك تم تقديمه</span>
+              </div>
+              <div className="flex flex-col">
+                <span className="text-5xl font-black text-secondary">100%</span>
+                <span className="text-sm font-bold uppercase tracking-widest opacity-80">طازج فريش</span>
+              </div>
+              <div className="flex flex-col">
+                <span className="text-5xl font-black text-secondary">24/7</span>
+                <span className="text-sm font-bold uppercase tracking-widest opacity-80">دعم الفعاليات</span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Footer / Contact */}
-      <footer id="contact" className="bg-amber-50 text-slate-800 pt-24 pb-12 overflow-hidden relative border-t border-amber-200">
+      <footer id="contact" className="bg-white text-slate-800 pt-32 pb-12 overflow-hidden border-t border-slate-50">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-start mb-20">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-start mb-32">
             <div>
-              <div className="flex items-center gap-5 mb-10">
-                <div className="w-16 h-16 bg-orange-500 rounded-[1.5rem] flex items-center justify-center text-white text-3xl font-black shadow-xl">
+              <div className="flex items-center gap-5 mb-12">
+                <div className="w-20 h-20 bg-primary rounded-[2.5rem] flex items-center justify-center text-white text-4xl font-black shadow-2xl shadow-cyan-200">
                   S
                 </div>
                 <div>
-                  <h2 className="text-4xl font-black text-slate-800 uppercase leading-none">Snacky</h2>
-                  <p className="text-orange-600 font-bold uppercase tracking-widest text-xs mt-1">Creative Catering</p>
+                  <h2 className="text-5xl font-black text-slate-800 uppercase leading-none">Snacky</h2>
+                  <p className="text-primary font-black uppercase tracking-widest text-xs mt-2">سناكات متنقلة لكل مناسبة</p>
                 </div>
               </div>
-              <p className="text-slate-500 text-xl leading-relaxed max-w-md italic mb-12">
-                "أحلى فعاليات للأطفال والكبار! ما يحتاج تروح لمكان… سناكي يمركم!"
+              <p className="text-slate-500 text-xl leading-relaxed max-w-md font-medium mb-16">
+                "أجمل الفعاليات للأطفال والكبار، ولا تحتاجون للذهاب إلى أي مكان، سناكي يصل إليكم أينما كنتم ليصنع أجمل اللحظات السعيدة."
               </p>
               
-              <div className="flex gap-4">
-                <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-sm border border-amber-200 text-xl">📸</div>
+              <div className="flex flex-wrap gap-12">
+                <div className="flex items-center gap-4">
+                  <div className="w-16 h-16 bg-slate-50 rounded-3xl flex items-center justify-center text-2xl shadow-sm border border-slate-100">📸</div>
                   <div className="text-sm">
-                    <p className="text-slate-400 font-bold leading-none mb-1 text-[10px]">INSTAGRAM</p>
-                    <p className="font-bold text-slate-700">@Snacky.q8</p>
+                    <p className="text-slate-400 font-black leading-none mb-1 text-[10px]">INSTAGRAM</p>
+                    <p className="font-bold text-slate-700 text-lg">@Snacky.q8</p>
                   </div>
                 </div>
-                <div className="w-px h-12 bg-amber-200 mx-4" />
-                <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-sm border border-amber-200 text-xl">🎵</div>
+                <div className="flex items-center gap-4">
+                  <div className="w-16 h-16 bg-slate-50 rounded-3xl flex items-center justify-center text-2xl shadow-sm border border-slate-100">📹</div>
                   <div className="text-sm">
-                    <p className="text-slate-400 font-bold leading-none mb-1 text-[10px]">TIKTOK</p>
-                    <p className="font-bold text-slate-700">@Snacky.q8</p>
+                    <p className="text-slate-400 font-black leading-none mb-1 text-[10px]">TIKTOK</p>
+                    <p className="font-bold text-slate-700 text-lg">@Snacky.q8</p>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div className="bg-white p-12 rounded-[3.5rem] shadow-sm border border-amber-200">
-              <h3 className="text-3xl font-black mb-10 text-slate-900">احجز لفعاليتك</h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-                <div className="flex flex-col gap-2">
-                  <span className="text-[10px] text-slate-400 uppercase font-black tracking-widest">تواصل هاتفي</span>
+            <div className="bg-primary p-12 md:p-16 rounded-[4rem] shadow-3xl shadow-cyan-100 relative overflow-hidden group">
+              <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -mr-32 -mt-32 blur-3xl group-hover:scale-125 transition-transform duration-1000" />
+              <h3 className="text-3xl md:text-4xl font-black mb-12 text-white relative z-10">احجز لفعاليتك الآن</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-12 relative z-10">
+                <div className="flex flex-col gap-3">
+                  <span className="text-[10px] text-white/60 uppercase font-black tracking-widest">تواصل هاتفي</span>
                   {CONTACT_INFO.phones.map((p) => (
-                    <a key={p} href={`tel:${p}`} className="text-2xl font-black text-orange-600 hover:text-orange-500 transition-colors tracking-tight">{p}</a>
+                    <a key={p} href={`tel:${p}`} className="text-3xl font-black text-white hover:text-secondary transition-colors tracking-tight">{p}</a>
                   ))}
                 </div>
-                <div className="flex flex-col gap-2">
-                  <span className="text-[10px] text-slate-400 uppercase font-black tracking-widest">البريد الإلكتروني</span>
-                  <a href={`mailto:${CONTACT_INFO.email}`} className="text-lg font-bold text-slate-700 break-all">{CONTACT_INFO.email}</a>
+                <div className="flex flex-col gap-3">
+                  <span className="text-[10px] text-white/60 uppercase font-black tracking-widest">البريد الإلكتروني</span>
+                  <a href={`mailto:${CONTACT_INFO.email}`} className="text-lg font-bold text-white/90 break-all">{CONTACT_INFO.email}</a>
                 </div>
               </div>
-              <button className="w-full mt-12 py-5 bg-slate-900 text-white rounded-2xl font-bold text-lg shadow-xl shadow-slate-200 hover:scale-[1.02] transition-transform">
-                ارسل لنا رسالة الآن
-              </button>
+              <a 
+                href={`https://wa.me/965${CONTACT_INFO.phones[0]}`}
+                target="_blank"
+                rel="noreferrer"
+                className="block w-full mt-16 py-6 bg-white text-primary rounded-[2rem] font-black text-xl text-center shadow-2xl shadow-cyan-900/20 hover:scale-[1.02] transition-transform relative z-10"
+              >
+                ارسل لنا واتساب
+              </a>
             </div>
           </div>
 
-          <div className="pt-10 border-t border-amber-200 flex flex-col md:flex-row justify-between items-center gap-6">
-            <p className="text-slate-400 text-sm font-medium">
-              &copy; {new Date().getFullYear()} سناكي كويت. نصلكم جميع مناطق الكويت.
+          <div className="pt-12 border-t border-slate-100 flex flex-col md:flex-row justify-between items-center gap-8">
+            <p className="text-slate-400 text-sm font-bold opacity-80">
+              &copy; {new Date().getFullYear()} سناكي كويت. نخدم جميع مناطق الكويت بحب وشغف.
             </p>
-            <div className="text-slate-300 font-black text-4xl uppercase tracking-tighter opacity-20 select-none">
-              Geometric Balance
+            <div className="text-primary font-black text-4xl uppercase tracking-tighter opacity-10 select-none">
+              Snacky Brand Identity
             </div>
           </div>
         </div>
@@ -380,6 +457,16 @@ export default function App() {
           -ms-overflow-style: none;
           scrollbar-width: none;
         }
+        .text-primary { color: var(--color-primary); }
+        .bg-primary { background-color: var(--color-primary); }
+        .text-secondary { color: var(--color-secondary); }
+        .bg-secondary { background-color: var(--color-secondary); }
+        .bg-primary-light { background-color: var(--color-primary-light); }
+        .text-primary-dark { color: var(--color-primary-dark); }
+        .shadow-cyan-100 { --tw-shadow-color: #cffafe; --tw-shadow: var(--tw-shadow-colored); }
+        .shadow-cyan-200 { --tw-shadow-color: #a5f3fc; --tw-shadow: var(--tw-shadow-colored); }
+        .border-cyan-100 { border-color: #cffafe; }
+        .border-cyan-50 { border-color: #ecfeff; }
       `}</style>
     </div>
   );

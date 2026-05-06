@@ -3,4 +3,17 @@
 
 @theme {
   --font-sans: "Cairo", ui-sans-serif, system-ui, sans-serif;
+  
+  --color-primary: #00bcd4;
+  --color-primary-dark: #0097a7;
+  --color-primary-light: #b2ebf2;
+  --color-secondary: #fdd835;
+  --color-brand-yellow: #ffca28;
+  --color-brand-blue: #00bcd4;
+}
+
+@layer base {
+  body {
+    @apply bg-white text-slate-800;
+  }
 }
