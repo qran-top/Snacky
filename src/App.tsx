@@ -5,7 +5,7 @@
 // Final deployment fix verification for snackyq8.com - Corrected Base Path
 
 import { motion } from "motion/react";
-import { Send, Star, PartyPopper, Truck, Music } from "lucide-react";
+import { Send, Star, PartyPopper, Truck, Music, Instagram, Video, Ghost } from "lucide-react";
 
 // استيراد الصور من مصادر خارجية لضمان عمل الموقع حتى في غياب الملفات المحلية
 // استيراد الصور من مصادر خارجية لضمان عمل الموقع حتى يتم رفع الصور المحلية
@@ -94,7 +94,32 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-white text-slate-800 font-sans selection:bg-cyan-100" dir="rtl">
+    <>
+      {/* Floating Social Bar */}
+      <div className="fixed left-6 top-1/2 -translate-y-1/2 z-[60] hidden xl:flex flex-col gap-4">
+        {[
+          { icon: Instagram, href: "https://instagram.com/snacky.q8", color: "hover:bg-pink-500" },
+          { icon: Video, href: "https://tiktok.com/@snacky.q8", color: "hover:bg-slate-900" },
+          { icon: Ghost, href: "https://snapchat.com/add/snacky.q8", color: "hover:bg-yellow-400 hover:text-slate-900" }
+        ].map((social, i) => (
+          <motion.a
+            key={i}
+            href={social.href}
+            target="_blank"
+            rel="noreferrer"
+            initial={{ x: -100, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ delay: 0.5 + i * 0.1 }}
+            whileHover={{ scale: 1.1, x: 5 }}
+            className={`w-12 h-12 bg-white/90 backdrop-blur-md rounded-2xl flex items-center justify-center text-primary shadow-xl border border-white/50 transition-colors ${social.color} hover:text-white`}
+          >
+            <social.icon className="w-6 h-6" />
+          </motion.a>
+        ))}
+      </div>
+
+      {/* Main Container */}
+      <div className="min-h-screen bg-white text-slate-800 font-sans selection:bg-cyan-100" dir="rtl">
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-cyan-100">
         <div className="max-w-7xl mx-auto px-4 md:px-6 h-20 flex items-center justify-between">
@@ -395,21 +420,34 @@ export default function App() {
                 "أجمل الفعاليات للأطفال والكبار، ولا تحتاجون للذهاب إلى أي مكان، سناكي يصل إليكم أينما كنتم ليصنع أجمل اللحظات السعيدة."
               </p>
               
-              <div className="flex flex-wrap gap-12">
-                <div className="flex items-center gap-4">
-                  <div className="w-16 h-16 bg-slate-50 rounded-3xl flex items-center justify-center text-2xl shadow-sm border border-slate-100">📸</div>
+              <div className="flex flex-wrap gap-8">
+                <a href="https://instagram.com/snacky.q8" target="_blank" rel="noreferrer" className="flex items-center gap-4 group/social">
+                  <div className="w-14 h-14 bg-slate-50 rounded-2xl flex items-center justify-center text-primary shadow-sm border border-slate-100 group-hover/social:bg-primary group-hover/social:text-white transition-all">
+                    <Instagram className="w-7 h-7" />
+                  </div>
                   <div className="text-sm">
                     <p className="text-slate-400 font-black leading-none mb-1 text-[10px]">INSTAGRAM</p>
-                    <p className="font-bold text-slate-700 text-lg">@Snacky.q8</p>
+                    <p className="font-bold text-slate-700">@Snacky.q8</p>
                   </div>
-                </div>
-                <div className="flex items-center gap-4">
-                  <div className="w-16 h-16 bg-slate-50 rounded-3xl flex items-center justify-center text-2xl shadow-sm border border-slate-100">📹</div>
+                </a>
+                <a href="https://tiktok.com/@snacky.q8" target="_blank" rel="noreferrer" className="flex items-center gap-4 group/social">
+                  <div className="w-14 h-14 bg-slate-50 rounded-2xl flex items-center justify-center text-primary shadow-sm border border-slate-100 group-hover/social:bg-primary group-hover/social:text-white transition-all">
+                    <Video className="w-7 h-7" />
+                  </div>
                   <div className="text-sm">
                     <p className="text-slate-400 font-black leading-none mb-1 text-[10px]">TIKTOK</p>
-                    <p className="font-bold text-slate-700 text-lg">@Snacky.q8</p>
+                    <p className="font-bold text-slate-700">@Snacky.q8</p>
                   </div>
-                </div>
+                </a>
+                <a href="https://snapchat.com/add/snacky.q8" target="_blank" rel="noreferrer" className="flex items-center gap-4 group/social">
+                  <div className="w-14 h-14 bg-slate-50 rounded-2xl flex items-center justify-center text-primary shadow-sm border border-slate-100 group-hover/social:bg-primary group-hover/social:text-white transition-all">
+                    <Ghost className="w-7 h-7" />
+                  </div>
+                  <div className="text-sm">
+                    <p className="text-slate-400 font-black leading-none mb-1 text-[10px]">SNAPCHAT</p>
+                    <p className="font-bold text-slate-700">@Snacky.q8</p>
+                  </div>
+                </a>
               </div>
             </div>
 
@@ -469,6 +507,7 @@ export default function App() {
         .border-cyan-100 { border-color: #cffafe; }
         .border-cyan-50 { border-color: #ecfeff; }
       `}</style>
-    </div>
+      </div>
+    </>
   );
 }
