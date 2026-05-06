@@ -7,20 +7,23 @@
 import { motion } from "motion/react";
 import { Send, Star, PartyPopper, Truck, Music, Instagram, Video, Ghost } from "lucide-react";
 
-// استيراد الصور من مصادر خارجية لضمان عمل الموقع حتى في غياب الملفات المحلية
-// استيراد الصور من مصادر خارجية لضمان عمل الموقع حتى يتم رفع الصور المحلية
-const friesImg = "https://images.unsplash.com/photo-1573080496219-bb080dd4f877?q=80&w=1887&auto=format&fit=crop";
-const cottonCandy = "https://images.unsplash.com/photo-1572635148818-ef6fd45eb394?q=80&w=1780&auto=format&fit=crop";
-const spiralPotatoStick = "https://images.unsplash.com/photo-1541592106381-b31e9677c0e5?q=80&w=2070&auto=format&fit=crop";
-const popcornImg = "https://images.unsplash.com/photo-1585647347483-22b66260dfff?q=80&w=2070&auto=format&fit=crop";
-const cornImg = "https://images.unsplash.com/photo-1551754655-cd27e38d2076?q=80&w=2070&auto=format&fit=crop";
-const iceCreamImg = "https://images.unsplash.com/photo-1501443762994-82bd5dace89a?q=80&w=2070&auto=format&fit=crop";
-const heroTruck = "https://images.unsplash.com/photo-1565123409695-7b5ef63a2efb?q=80&w=2070&auto=format&fit=crop"; 
+// استيراد الصور من الملفات المرفوعة لضمان هوية سناكي الحقيقية
+const friesImg = "/fries_cyan_cone.png";
+const cottonCandy = "/cotton_candy_beach.png";
+const spiralPotatoStick = "/spiral_potato_stick.png";
+const popcornImg = "/popcorn_yellow_box.png";
+const cornImg = "/corn_cup_hand.png";
+const iceCreamImg = "/ice_cream_cone_mirror.png";
+const heroTruck = "/snacky_van_full.png"; 
 
-// صور إضافية للمعرض
-const popcornDetail = "https://images.unsplash.com/photo-1512149177596-f817c7ef5d4c?q=80&w=2000&auto=format&fit=crop";
-const iceCreamPlain = "https://images.unsplash.com/photo-1567206563064-6f60f40a2b57?q=80&w=1974&auto=format&fit=crop";
-const popcornYellow = "https://images.unsplash.com/photo-1505686994434-e3cc5abf1330?q=80&w=2070&auto=format&fit=crop";
+// صور إضافية للمعرض والمنيو
+const iceCreamPopcorn = "/ice_cream_popcorn.png";
+const popcornDetail = "/popcorn_box_detail.png";
+const iceCreamPlain = "/ice_cream_cone_mirror.png";
+const popcornYellow = "/popcorn_hand_holding.png";
+const spiralPotatoesBox = "/spiral_potato_yellow_box.png";
+const cornCupDetail = "/corn_scoop_detail.png";
+const popcornCyanBox = "/popcorn_cyan_box.png";
 
 const MENU_ITEMS = [
   {
@@ -33,13 +36,13 @@ const MENU_ITEMS = [
     id: 2,
     title: "آيس كريم سناكي",
     description: "آيس كريم بارد ومنعش، متوفر بالبوب كورن أو سادة",
-    image: iceCreamImg,
+    image: iceCreamPopcorn,
   },
   {
     id: 3,
     title: "نفيش (بوب كورن)",
     description: "نفيش طازج وحار بمذاق رائع في بوكس سناكي",
-    image: popcornImg,
+    image: popcornCyanBox,
   },
   {
     id: 4,
@@ -51,7 +54,7 @@ const MENU_ITEMS = [
     id: 5,
     title: "ذرة سناكي",
     description: "حبوب الذرة بالزبدة والليمون في كوب سناكي المميز",
-    image: cornImg,
+    image: cornCupDetail,
   },
   {
     id: 6,
@@ -63,7 +66,7 @@ const MENU_ITEMS = [
     id: 7,
     title: "بوكس بطاط حلزوني",
     description: "مجموعة من البطاط الحلزوني في بوكس للمشاركة",
-    image: spiralPotatoStick,
+    image: spiralPotatoesBox,
   },
 ];
 
@@ -347,23 +350,23 @@ export default function App() {
                 <img src={popcornDetail} alt="Gallery 1" className="w-full h-full object-cover hover:scale-110 transition-transform duration-700" />
               </div>
               <div className="rounded-[2.5rem] overflow-hidden shadow-lg border-2 border-white aspect-square">
-                <img src={iceCreamPlain} alt="Gallery 2" className="w-full h-full object-cover hover:scale-110 transition-transform duration-700" />
+                <img src={iceCreamPopcorn} alt="Gallery 2" className="w-full h-full object-cover hover:scale-110 transition-transform duration-700" />
               </div>
             </div>
             <div className="space-y-4 md:space-y-6 pt-12">
               <div className="rounded-[2.5rem] overflow-hidden shadow-lg border-2 border-white aspect-square">
-                <img src={popcornYellow} alt="Gallery 3" className="w-full h-full object-cover hover:scale-110 transition-transform duration-700" />
+                <img src={popcornCyanBox} alt="Gallery 3" className="w-full h-full object-cover hover:scale-110 transition-transform duration-700" />
               </div>
               <div className="rounded-[2.5rem] overflow-hidden shadow-lg border-2 border-white aspect-[3/4]">
-                <img src={spiralPotatoStick} alt="Gallery 4" className="w-full h-full object-cover hover:scale-110 transition-transform duration-700" />
+                <img src={spiralPotatoesBox} alt="Gallery 4" className="w-full h-full object-cover hover:scale-110 transition-transform duration-700" />
               </div>
             </div>
             <div className="space-y-4 md:space-y-6">
               <div className="rounded-[2.5rem] overflow-hidden shadow-lg border-2 border-white aspect-[3/4]">
-                <img src={friesImg} alt="Gallery 5" className="w-full h-full object-cover hover:scale-110 transition-transform duration-700" />
+                <img src={cottonCandy} alt="Gallery 5" className="w-full h-full object-cover hover:scale-110 transition-transform duration-700" />
               </div>
               <div className="rounded-[2.5rem] overflow-hidden shadow-lg border-2 border-white aspect-square">
-                <img src={popcornImg} alt="Gallery 6" className="w-full h-full object-cover hover:scale-110 transition-transform duration-700" />
+                <img src={cornCupDetail} alt="Gallery 6" className="w-full h-full object-cover hover:scale-110 transition-transform duration-700" />
               </div>
             </div>
             <div className="space-y-4 md:space-y-6 pt-12">
