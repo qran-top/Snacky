@@ -172,11 +172,11 @@ export default function App() {
       {/* Hero Section */}
       <section id="home" className="pt-32 pb-20 px-6 relative overflow-hidden bg-white">
         {/* Subtle Watermark Background */}
-        <div className="absolute inset-0 opacity-[0.03] grayscale pointer-events-none z-0">
+        <div className="absolute inset-0 opacity-[0.08] grayscale blur-[2px] pointer-events-none z-0">
           <img 
             src={heroTruck} 
             alt="Faded Background" 
-            className="w-full h-full object-cover scale-125 md:scale-110"
+            className="w-full h-full object-cover scale-150 md:scale-110"
             referrerPolicy="no-referrer"
           />
         </div>
