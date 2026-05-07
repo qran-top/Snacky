@@ -120,9 +120,9 @@ export default function App() {
       {/* Floating Social Bar */}
       <div className="fixed left-6 top-1/2 -translate-y-1/2 z-[60] hidden xl:flex flex-col gap-4">
         {[
-          { icon: Instagram, href: "https://instagram.com/snacky.q8", color: "hover:bg-pink-500" },
-          { icon: TikTokIcon, href: "https://tiktok.com/@snacky.q8", color: "hover:bg-slate-900" },
-          { icon: Ghost, href: "https://snapchat.com/add/snacky.q8", color: "hover:bg-yellow-400 hover:text-slate-900" }
+          { icon: Instagram, href: "https://instagram.com/snacky.q8", color: "hover:bg-[#E4405F]" },
+          { icon: TikTokIcon, href: "https://tiktok.com/@snacky.q8", color: "hover:bg-[#000000]" },
+          { icon: Ghost, href: "https://snapchat.com/add/snacky.q8", color: "hover:bg-[#FFFC00] hover:text-[#000000]" }
         ].map((social, i) => (
           <motion.a
             key={i}
@@ -170,10 +170,48 @@ export default function App() {
       </nav>
 
       {/* Hero Section */}
-      <section id="home" className="pt-32 pb-20 px-6 relative overflow-hidden">
-        {/* Decorative elements */}
-        <div className="absolute -top-24 -left-24 w-96 h-96 bg-primary/5 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute top-1/2 -right-24 w-64 h-64 bg-secondary/10 rounded-full blur-3xl" />
+      <section id="home" className="pt-32 pb-20 px-6 relative overflow-hidden bg-white">
+        {/* Animated Fluid Background */}
+        <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
+          <motion.div 
+            animate={{
+              x: [0, 60, 0],
+              y: [0, 40, 0],
+              scale: [1, 1.1, 1],
+            }}
+            transition={{
+              duration: 25,
+              repeat: Infinity,
+              ease: "easeInOut"
+            }}
+            className="absolute -top-32 -left-32 w-[35rem] h-[35rem] bg-primary/5 rounded-full blur-[100px]" 
+          />
+          <motion.div 
+            animate={{
+              x: [0, -50, 0],
+              y: [0, 60, 0],
+              scale: [1, 1.15, 1],
+            }}
+            transition={{
+              duration: 30,
+              repeat: Infinity,
+              ease: "easeInOut"
+            }}
+            className="absolute top-1/2 -right-40 w-[40rem] h-[40rem] bg-secondary/5 rounded-full blur-[120px]" 
+          />
+          <motion.div 
+            animate={{
+              y: [0, -40, 0],
+              opacity: [0.3, 0.4, 0.3],
+            }}
+            transition={{
+              duration: 20,
+              repeat: Infinity,
+              ease: "easeInOut"
+            }}
+            className="absolute bottom-10 left-1/4 w-[25rem] h-[25rem] bg-cyan-50/20 rounded-full blur-[90px]" 
+          />
+        </div>
 
         <div className="max-w-7xl mx-auto grid grid-cols-12 gap-6 lg:gap-12 items-center relative z-10">
           <motion.div
@@ -454,8 +492,8 @@ export default function App() {
                 
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
                   <a href={CONTACT_INFO.socials.instagram} target="_blank" rel="noreferrer" className="group/social">
-                    <div className="p-8 bg-slate-50/50 rounded-[2.5rem] flex flex-col items-center gap-5 transition-all duration-500 hover:bg-primary hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/30 border border-transparent hover:border-white/20">
-                      <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center text-primary shadow-sm group-hover/social:scale-110 transition-transform">
+                    <div className="p-8 bg-slate-50/50 rounded-[2.5rem] flex flex-col items-center gap-5 transition-all duration-500 hover:bg-[#E4405F] hover:-translate-y-2 hover:shadow-2xl hover:shadow-[#E4405F]/30 border border-transparent hover:border-white/20">
+                      <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center text-[#E4405F] shadow-sm group-hover/social:scale-110 transition-transform">
                         <Instagram className="w-8 h-8" />
                       </div>
                       <div className="text-center">
@@ -466,7 +504,7 @@ export default function App() {
                   </a>
 
                   <a href={CONTACT_INFO.socials.tiktok} target="_blank" rel="noreferrer" className="group/social">
-                    <div className="p-8 bg-slate-50/50 rounded-[2.5rem] flex flex-col items-center gap-5 transition-all duration-500 hover:bg-[#000000] hover:-translate-y-2 hover:shadow-2xl hover:shadow-black/30 border border-transparent hover:border-white/20">
+                    <div className="p-8 bg-slate-50/50 rounded-[2.5rem] flex flex-col items-center gap-5 transition-all duration-500 hover:bg-black hover:-translate-y-2 hover:shadow-2xl hover:shadow-black/30 border border-transparent hover:border-white/20">
                       <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center text-slate-900 shadow-sm group-hover/social:scale-110 transition-transform">
                         <TikTokIcon className="w-8 h-8" />
                       </div>
@@ -479,11 +517,11 @@ export default function App() {
 
                   <a href={CONTACT_INFO.socials.snapchat} target="_blank" rel="noreferrer" className="group/social">
                     <div className="p-8 bg-slate-50/50 rounded-[2.5rem] flex flex-col items-center gap-5 transition-all duration-500 hover:bg-[#FFFC00] hover:-translate-y-2 hover:shadow-2xl hover:shadow-[#FFFC00]/30 border border-transparent hover:border-white/20">
-                      <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center text-slate-900 shadow-sm group-hover/social:scale-110 transition-transform">
-                        <Ghost className="w-8 h-8" />
+                      <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center text-[#E4DB00] filter drop-shadow-[0_0_1px_rgba(0,0,0,0.5)] shadow-sm group-hover/social:scale-110 transition-transform">
+                        <Ghost className="w-8 h-8 fill-current" />
                       </div>
                       <div className="text-center">
-                        <p className="text-[10px] font-black text-slate-400 group-hover/social:text-slate-600 uppercase tracking-widest mb-1">Snapchat</p>
+                        <p className="text-[10px] font-black text-slate-400 group-hover/social:text-slate-800 uppercase tracking-widest mb-1">Snapchat</p>
                         <p className="font-bold text-slate-700 group-hover/social:text-slate-900">@Snacky.q8</p>
                       </div>
                     </div>
@@ -499,7 +537,7 @@ export default function App() {
                     <PartyPopper className="w-8 h-8" />
                   </div>
                   <div>
-                    <p className="font-black text-primary-dark text-lg mb-1">خللك قريب!</p>
+                    <p className="font-black text-primary-dark text-lg mb-1">خلك قريب!</p>
                     <p className="font-bold text-slate-600 text-sm leading-relaxed">
                       تابعنا وشاركنا لحظاتك السعيدة مع سناكي. ننتظركم دائماً بعروض وفعاليات مفاجئة!
                     </p>
