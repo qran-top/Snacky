@@ -5,7 +5,32 @@
 // Final deployment fix verification for snackyq8.com - Corrected Base Path
 
 import { motion } from "motion/react";
-import { Send, Star, PartyPopper, Truck, Music, Instagram, Video, Ghost } from "lucide-react";
+import { Send, Star, PartyPopper, Truck, Instagram, Ghost, LucideProps } from "lucide-react";
+
+const WhatsAppIcon = (props: LucideProps) => (
+  <svg 
+    viewBox="0 0 24 24" 
+    fill="currentColor" 
+    {...props}
+  >
+    <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766 0-3.18-2.589-5.767-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217s.231.006.332.009c.109.004.258-.041.405.314.159.386.541 1.321.588 1.417.047.096.078.208.014.332-.064.124-.096.202-.191.314-.096.111-.202.247-.289.332-.096.096-.197.199-.085.39.112.191.498.822 1.071 1.332.738.657 1.36.861 1.553.946.193.085.307.071.422-.059.115-.129.492-.572.624-.764.133-.193.265-.162.448-.096.183.066 1.162.548 1.363.648s.336.149.386.233c.05.085.05.49-.094.894z"/>
+    <path d="M12 2C6.477 2 2 6.477 2 12c0 2.136.67 4.116 1.81 5.74L2 22l4.364-1.727A9.946 9.946 0 0 0 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18c-1.83 0-3.535-.558-4.957-1.512l-.356-.24-2.585.834.768-2.45-.27-.42A7.947 7.947 0 0 1 4 12c0-4.411 3.589-8 8-8s8 3.589 8 8-3.589 8-8 8z"/>
+  </svg>
+);
+
+const TikTokIcon = (props: LucideProps) => (
+  <svg 
+    viewBox="0 0 24 24" 
+    fill="none" 
+    stroke="currentColor" 
+    strokeWidth="2" 
+    strokeLinecap="round" 
+    strokeLinejoin="round" 
+    {...props}
+  >
+    <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5" />
+  </svg>
+);
 
 // استيراد الصور من الملفات المرفوعة لضمان هوية سناكي الحقيقية
 const friesImg = "/fries_cyan_cone.jpg";
@@ -62,12 +87,6 @@ const MENU_ITEMS = [
     description: "بطاط مقلية ذهبية ومقرمشة في قمع سناكي المبتكر",
     image: friesImg,
   },
-  {
-    id: 7,
-    title: "بوكس بطاط حلزوني",
-    description: "مجموعة من البطاط الحلزوني في بوكس للمشاركة",
-    image: spiralPotatoesBox,
-  },
 ];
 
 const CONTACT_INFO = {
@@ -102,7 +121,7 @@ export default function App() {
       <div className="fixed left-6 top-1/2 -translate-y-1/2 z-[60] hidden xl:flex flex-col gap-4">
         {[
           { icon: Instagram, href: "https://instagram.com/snacky.q8", color: "hover:bg-pink-500" },
-          { icon: Video, href: "https://tiktok.com/@snacky.q8", color: "hover:bg-slate-900" },
+          { icon: TikTokIcon, href: "https://tiktok.com/@snacky.q8", color: "hover:bg-slate-900" },
           { icon: Ghost, href: "https://snapchat.com/add/snacky.q8", color: "hover:bg-yellow-400 hover:text-slate-900" }
         ].map((social, i) => (
           <motion.a
@@ -156,32 +175,36 @@ export default function App() {
         <div className="absolute -top-24 -left-24 w-96 h-96 bg-primary/5 rounded-full blur-3xl animate-pulse" />
         <div className="absolute top-1/2 -right-24 w-64 h-64 bg-secondary/10 rounded-full blur-3xl" />
 
-        <div className="max-w-7xl mx-auto grid grid-cols-12 gap-12 items-center relative z-10">
+        <div className="max-w-7xl mx-auto grid grid-cols-12 gap-6 lg:gap-12 items-center relative z-10">
           <motion.div
             initial={{ x: 50, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
-            className="col-span-12 lg:col-span-7 flex flex-col items-start gap-6"
+            className="col-span-12 lg:col-span-7 flex flex-col items-center lg:items-start gap-6 text-center lg:text-right w-full"
           >
             <div className="inline-block px-4 py-1.5 bg-primary-light text-primary-dark rounded-full text-sm font-bold">
               نغطّي جميع مناطق الكويت 🇰🇼
             </div>
-            <h1 className="text-4xl md:text-7xl font-black text-slate-800 leading-tight">
+            <h1 className="text-3xl md:text-7xl font-black text-slate-800 leading-tight">
               أجمل الفعاليات للأطفال والكبار!<br />
               <span className="text-primary underline decoration-secondary underline-offset-8">سناكي يصل إليكم</span>
             </h1>
-            <p className="text-lg md:text-xl text-slate-600 leading-relaxed max-w-lg">
+            <p className="text-lg md:text-xl text-slate-600 leading-relaxed max-w-full lg:max-w-lg">
               سناكي هو عالم من السناكات المتنقلة بتصميم عصري وألوان مبهجة. نصل لجميع الجمعات والمناسبات والفعاليات لنضفي جواً من السعادة واللذة.
             </p>
-            <div className="flex flex-wrap gap-4 mt-4 w-full">
-              <a 
-                href={`https://wa.me/965${CONTACT_INFO.phones[0]}`}
-                target="_blank"
-                rel="noreferrer"
-                className="bg-green-500 text-white px-6 md:px-10 py-4 md:py-5 rounded-2xl font-bold text-base md:text-lg shadow-2xl shadow-green-100 flex items-center justify-center gap-3 hover:bg-green-600 transition-colors flex-1 md:flex-none"
-              >
-                تواصل واتساب
-                <Send className="w-5 h-5 -rotate-90" />
-              </a>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4 w-full lg:max-w-xl">
+              {CONTACT_INFO.phones.map((phone, i) => (
+                <a 
+                  key={phone}
+                  href={`https://wa.me/965${phone}`}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="bg-[#25D366] text-white px-6 py-4 rounded-2xl font-bold text-base md:text-lg shadow-xl shadow-green-100 flex items-center justify-center gap-3 hover:bg-[#128C7E] transition-colors"
+                >
+                  <WhatsAppIcon className="w-6 h-6" />
+                  واتساب {i === 0 ? "1" : "2"}
+                </a>
+              ))}
+            </div>
               <div className="flex items-center gap-3 px-6 py-4 bg-white rounded-2xl border border-cyan-50 shadow-sm">
                 <div className="flex -space-x-2 space-x-reverse">
                   {[
@@ -204,7 +227,6 @@ export default function App() {
                   <p className="text-slate-400 text-[10px]">نخدم جميع مناطق الكويت</p>
                 </div>
               </div>
-            </div>
           </motion.div>
           
           <motion.div
@@ -355,7 +377,7 @@ export default function App() {
             </div>
             <div className="space-y-4 md:space-y-6 pt-12">
               <div className="rounded-[2.5rem] overflow-hidden shadow-lg border-2 border-white aspect-square">
-                <img src={popcornCyanBox} alt="Gallery 3" className="w-full h-full object-cover hover:scale-110 transition-transform duration-700" />
+                <img src={popcornYellow} alt="Gallery 3" className="w-full h-full object-cover hover:scale-110 transition-transform duration-700" />
               </div>
               <div className="rounded-[2.5rem] overflow-hidden shadow-lg border-2 border-white aspect-[3/4]">
                 <img src={spiralPotatoesBox} alt="Gallery 4" className="w-full h-full object-cover hover:scale-110 transition-transform duration-700" />
@@ -446,7 +468,7 @@ export default function App() {
                   <a href={CONTACT_INFO.socials.tiktok} target="_blank" rel="noreferrer" className="group/social">
                     <div className="p-8 bg-slate-50/50 rounded-[2.5rem] flex flex-col items-center gap-5 transition-all duration-500 hover:bg-[#000000] hover:-translate-y-2 hover:shadow-2xl hover:shadow-black/30 border border-transparent hover:border-white/20">
                       <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center text-slate-900 shadow-sm group-hover/social:scale-110 transition-transform">
-                        <Music className="w-8 h-8" />
+                        <TikTokIcon className="w-8 h-8" />
                       </div>
                       <div className="text-center">
                         <p className="text-[10px] font-black text-slate-400 group-hover/social:text-white/70 uppercase tracking-widest mb-1">TikTok</p>
@@ -502,14 +524,20 @@ export default function App() {
                   <a href={`mailto:${CONTACT_INFO.email}`} className="text-lg font-bold text-white/90 break-all">{CONTACT_INFO.email}</a>
                 </div>
               </div>
-              <a 
-                href={`https://wa.me/965${CONTACT_INFO.phones[0]}`}
-                target="_blank"
-                rel="noreferrer"
-                className="block w-full mt-16 py-6 bg-white text-primary rounded-[2rem] font-black text-xl text-center shadow-2xl shadow-cyan-900/20 hover:scale-[1.02] transition-transform relative z-10"
-              >
-                ارسل لنا واتساب
-              </a>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-16 relative z-10">
+                {CONTACT_INFO.phones.map((phone) => (
+                  <a 
+                    key={phone}
+                    href={`https://wa.me/965${phone}`}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="flex items-center justify-center gap-3 py-6 bg-white text-primary rounded-[2rem] font-black text-xl shadow-2xl shadow-cyan-900/20 hover:scale-[1.02] transition-transform"
+                  >
+                    <WhatsAppIcon className="w-7 h-7" />
+                    واتساب {phone}
+                  </a>
+                ))}
+              </div>
             </div>
           </div>
 
