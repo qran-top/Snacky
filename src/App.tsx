@@ -279,20 +279,7 @@ export default function App() {
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000"
                 referrerPolicy="no-referrer"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-primary/40 via-transparent to-transparent" />
-              <div className="absolute bottom-8 left-8 right-8 bg-white/90 backdrop-blur-sm p-6 rounded-2xl border border-white/50 shadow-lg">
-                <div className="flex items-center justify-between mb-2">
-                  <h3 className="font-black text-primary text-xl">سيارة سناكي</h3>
-                  <div className="flex text-secondary">
-                    <Star className="w-4 h-4 fill-current" />
-                    <Star className="w-4 h-4 fill-current" />
-                    <Star className="w-4 h-4 fill-current" />
-                    <Star className="w-4 h-4 fill-current" />
-                    <Star className="w-4 h-4 fill-current" />
-                  </div>
-                </div>
-                <p className="text-sm text-slate-600 font-medium lowercase">@snacky.q8 • {CONTACT_INFO.phones[0]} - {CONTACT_INFO.phones[1]}</p>
-              </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             </div>
             
             {/* Floating badges */}
