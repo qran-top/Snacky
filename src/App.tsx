@@ -171,55 +171,45 @@ export default function App() {
 
       {/* Hero Section */}
       <section id="home" className="pt-32 pb-20 px-6 relative overflow-hidden bg-white">
-        {/* Subtle Watermark Background */}
-        <div className="absolute inset-0 opacity-[0.08] grayscale blur-[2px] pointer-events-none z-0">
-          <img 
-            src={heroTruck} 
-            alt="Faded Background" 
-            className="w-full h-full object-cover scale-150 md:scale-110"
-            referrerPolicy="no-referrer"
-          />
-        </div>
-
-        {/* Animated Fluid Background */}
-        <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
+        {/* Animated Mesh Gradient Background (Option 2) */}
+        <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none -z-0">
+          {/* Cyan Glow (Top Left) */}
           <motion.div 
             animate={{
-              x: [0, 60, 0],
-              y: [0, 40, 0],
-              scale: [1, 1.1, 1],
+              x: [-20, 40, -20],
+              y: [-10, 30, -10],
+              scale: [1, 1.2, 1],
             }}
-            transition={{
-              duration: 25,
-              repeat: Infinity,
-              ease: "easeInOut"
-            }}
-            className="absolute -top-32 -left-32 w-[35rem] h-[35rem] bg-primary/5 rounded-full blur-[100px]" 
+            transition={{ duration: 25, repeat: Infinity, ease: "easeInOut" }}
+            className="absolute -top-[10%] -left-[10%] w-[50rem] h-[50rem] bg-cyan-200/20 rounded-full blur-[120px]" 
           />
+          {/* Yellow Glow (Bottom Right) */}
           <motion.div 
             animate={{
-              x: [0, -50, 0],
-              y: [0, 60, 0],
-              scale: [1, 1.15, 1],
+              x: [20, -40, 20],
+              y: [10, -30, 10],
+              scale: [1.1, 1, 1.1],
             }}
-            transition={{
-              duration: 30,
-              repeat: Infinity,
-              ease: "easeInOut"
-            }}
-            className="absolute top-1/2 -right-40 w-[40rem] h-[40rem] bg-secondary/5 rounded-full blur-[120px]" 
+            transition={{ duration: 30, repeat: Infinity, ease: "easeInOut" }}
+            className="absolute -bottom-[10%] -right-[15%] w-[45rem] h-[45rem] bg-yellow-100/30 rounded-full blur-[130px]" 
           />
+          {/* Pink/Soft Glow (Center Left) */}
           <motion.div 
             animate={{
-              y: [0, -40, 0],
-              opacity: [0.3, 0.4, 0.3],
+              y: [0, 50, 0],
+              opacity: [0.1, 0.2, 0.1],
             }}
-            transition={{
-              duration: 20,
-              repeat: Infinity,
-              ease: "easeInOut"
+            transition={{ duration: 22, repeat: Infinity, ease: "easeInOut" }}
+            className="absolute top-1/4 -left-[5%] w-[35rem] h-[35rem] bg-pink-100/15 rounded-full blur-[110px]" 
+          />
+          {/* Deep Cyan Accent (Bottom Left) */}
+          <motion.div 
+            animate={{
+              x: [0, 30, 0],
+              y: [0, -30, 0],
             }}
-            className="absolute bottom-10 left-1/4 w-[25rem] h-[25rem] bg-cyan-50/20 rounded-full blur-[90px]" 
+            transition={{ duration: 28, repeat: Infinity, ease: "easeInOut" }}
+            className="absolute -bottom-[5%] left-[10%] w-[30rem] h-[30rem] bg-cyan-100/10 rounded-full blur-[100px]" 
           />
         </div>
 
