@@ -39,7 +39,7 @@ const spiralPotatoStick = "/spiral_potato_stick.jpg";
 const popcornImg = "/popcorn_yellow_box.jpg";
 const cornImg = "/corn_cup_hand.jpg";
 const iceCreamImg = "/ice_cream_cone_mirror.jpg";
-const heroTruck = "/snacky_van_full.jpg"; 
+const heroTruck = "/car.jpg"; 
 
 // صور إضافية للمعرض والمنيو
 const iceCreamPopcorn = "/ice_cream_popcorn.jpg";
